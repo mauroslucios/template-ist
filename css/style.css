@@ -441,6 +441,208 @@
         padding-left: 0;
     }
     }
+    /* =====================================================
+      SEÇÃO DE PRECIFICÇÃO
+    ===================================================== */
+    .pricing-visual{
+        position:relative;
+        min-height:700px;
+        width:100%;
+    }
+
+    .pricing-center{
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+    }
+
+    .pricing-image{
+        width:520px;
+        max-width:100%;
+    }
+
+    .pricing-card{
+        position:absolute;
+        width:280px;
+        background:#fff;
+        padding:25px;
+        border-radius:18px;
+        box-shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .pricing-card i{
+        font-size:2.2rem;
+        color:#0057d9;
+        margin-bottom:15px;
+    }
+
+    .pricing-card h3{
+        color:#003c9e;
+        font-weight:700;
+        margin-bottom:10px;
+    }
+
+    .pricing-card p{
+        color:#5f6b7a;
+        line-height:1.7;
+    }
+
+    .pricing-top{
+        top:30px;
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .pricing-left{
+        left:20px;
+        top:50%;
+        transform:translateY(-50%);
+    }
+
+    .pricing-right{
+        right:20px;
+        top:50%;
+        transform:translateY(-50%);
+    }
+
+    .pricing-bottom{
+        bottom:20px;
+        left:50%;
+        transform:translateX(-50%);
+    }
+    
+    /* ==========================================
+    SEÇÃO PLANOS HDI
+    ========================================== */
+
+    .pricing-plans {
+        width: 100%;
+        padding: 100px 5%;
+        background: #f8fbff;
+
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .plan-card {
+        position: relative;
+
+        width: 350px;
+        min-height: 560px;
+
+        background: #fff;
+        border-radius: 20px;
+
+        padding: 40px;
+
+        box-shadow:
+            0 15px 40px rgba(0,0,0,.08);
+
+        transition: .3s;
+    }
+
+    .plan-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .plan-card h3 {
+        font-size: 2rem;
+        color: #003c9e;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .plan-card p {
+        color: #64748b;
+        margin-bottom: 30px;
+    }
+
+    .plan-card ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .plan-card ul li {
+        padding: 12px 0;
+        border-bottom: 1px solid #e5e7eb;
+        color: #334155;
+    }
+
+    .plan-card ul li::before {
+        content: "✓";
+        color: #0057d9;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .price {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .price span {
+        display: block;
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: #0057d9;
+    }
+
+    .plan-btn {
+        width: 100%;
+        margin-top: 30px;
+        padding: 15px;
+
+        border: none;
+        border-radius: 10px;
+
+        background: #0057d9;
+        color: white;
+
+        font-weight: 700;
+        cursor: pointer;
+
+        transition: .3s;
+    }
+
+    .plan-btn:hover {
+        background: #003c9e;
+    }
+
+    .featured {
+        transform: scale(1.05);
+        border: 2px solid #0057d9;
+    }
+
+    .featured:hover {
+        transform: scale(1.08);
+    }
+
+    .badge-popular {
+        position: absolute;
+
+        top: -15px;
+        right: 25px;
+
+        background: linear-gradient(
+            135deg,
+            #0057d9,
+            #00a9e8
+        );
+
+        color: white;
+
+        padding: 8px 16px;
+
+        border-radius: 30px;
+
+        font-size: .85rem;
+        font-weight: 700;
+    }
 
     /* =====================================================
       SEÇÃO PRINCIPAL
