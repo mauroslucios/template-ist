@@ -4,6 +4,7 @@
         --accent:#27c000;
         --light:#E3F2FD;
         --text:#071642;
+        overflow-x: hidden
     }
 
     /* =====================================================
@@ -11,9 +12,10 @@
     ===================================================== */
 
     .navbar{
-        background:#fff !important;
+        background:rgba(255,255,255,.92) !important;
+        backdrop-filter:blur(10px);
         min-height:90px;
-        box-shadow:0 2px 15px rgba(0,0,0,.05);
+        box-shadow:0 2px 20px rgba(0,0,0,.05);
     }
 
     .navbar .nav-link{
@@ -30,9 +32,12 @@
 
     .navbar-brand img{
         height:60px!important;
+        margin-left: 40px;
     }
 
-    
+    .navbar-nav.list-inline {
+        margin-right: 40px;
+    }
     /* =====================================================
       HERO
     ===================================================== */
@@ -111,6 +116,331 @@
     background-size: cover;
     background-position: center;
 }
+
+    /* =====================================================
+    SEÇÃO CLUSTER HDI
+    ===================================================== */
+
+    .cluster-hdi-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #E3F2FD;
+    overflow: hidden;
+    padding-top: 110px;
+    font-family: "Roboto", Arial, sans-serif;
+    }
+
+   * Apenas a section Cluster HDI */
+    .cluster-hdi-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    overflow: hidden;
+    padding-top: 110px;
+    font-family: "Roboto", Arial, sans-serif;
+    }
+
+    /* Fundo decorativo sem estourar */
+    .cluster-hdi-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background:
+        linear-gradient(
+        180deg,
+        rgba(255,255,255,0.98) 0%,
+        rgba(255,255,255,0.95) 45%,
+        rgba(248,251,255,0.90) 100%
+        ),
+        url("../img/bg-health-network-upscaled.png");
+
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
+    opacity: 1;
+    }
+
+    .cluster-hdi-page {
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .cluster-hdi-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(13, 110, 253, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(13, 110, 253, 0.06) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity: 0.25;
+    }
+
+    .cluster-hdi-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: calc(100vh - 230px);
+    display: grid;
+    grid-template-columns: 36% 64%;
+    align-items: center;
+    gap: 30px;
+    padding: 0 5%;
+    }
+
+    .cluster-hdi-left {
+    max-width: 560px;
+    }
+
+    .cluster-hdi-logo {
+    width: 220px;
+    max-width: 100%;
+    margin-bottom: 70px;
+    }
+
+    .cluster-hdi-left h1 {
+    font-size: clamp(3.4rem, 5vw, 5.8rem);
+    font-weight: 800;
+    line-height: 1;
+    color: #061b4f;
+    margin-bottom: 18px;
+    }
+
+    .cluster-hdi-left h1 span {
+    color: #0057d9;
+    }
+
+    .cluster-hdi-left h2 {
+    font-size: clamp(1.8rem, 2.8vw, 3rem);
+    font-weight: 400;
+    line-height: 1.25;
+    color: #071538;
+    margin-bottom: 24px;
+    }
+
+    .cluster-line {
+    width: 90px;
+    height: 4px;
+    background: #0057d9;
+    margin-bottom: 28px;
+    border-radius: 20px;
+    }
+
+    .cluster-hdi-left p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 36px;
+    }
+
+    .cluster-hdi-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 34px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0057d9, #003c9e);
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 14px 28px rgba(0, 87, 217, 0.28);
+    transition: all 0.25s ease;
+    }
+
+    .cluster-hdi-btn:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #003c9e, #002f7a);
+    }
+
+    /* Área da imagem do Cluster */
+    .cluster-hdi-right {
+    position: relative;
+    min-height: 620px;
+    }
+
+    .cluster-image-area {
+    position: absolute;
+    left: 14%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 58%;
+    max-width: 760px;
+    }
+
+    .cluster-main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    }
+
+    /* Textos posicionados em volta da imagem */
+    .cluster-text-item {
+    position: absolute;
+    max-width: 310px;
+    }
+
+    .cluster-text-item h3 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    color: #003c9e;
+    font-weight: 800;
+    margin-bottom: 10px;
+    }
+
+    .cluster-text-item p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin: 0;
+    }
+
+    .cluster-text-top {
+    top: 5%;
+    right: 5%;
+    }
+
+    .cluster-text-left {
+    left: 0;
+    top: 52%;
+    }
+
+    .cluster-text-right {
+    right: 0;
+    top: 42%;
+    }
+
+    .cluster-text-bottom {
+    right: 9%;
+    bottom: 2%;
+    }
+
+    /* Benefícios */
+    .cluster-benefits {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 140px;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1.4fr repeat(5, 1fr);
+    align-items: center;
+    gap: 22px;
+    padding: 28px 5%;
+    box-shadow: 0 -8px 30px rgba(0, 57, 130, 0.06);
+    }
+
+    .benefits-title h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #071538;
+    margin: 0;
+    }
+
+    .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 78px;
+    border-left: 1px solid rgba(0, 60, 158, 0.14);
+    padding-left: 22px;
+    }
+
+    .benefit-item i {
+    font-size: 2.4rem;
+    color: #0057d9;
+    min-width: 42px;
+    text-align: center;
+    }
+
+    .benefit-item h4 {
+    font-size: 1rem;
+    color: #003c9e;
+    font-weight: 800;
+    margin: 0 0 4px;
+    }
+
+    .benefit-item p {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.4;
+    margin: 0;
+    }
+
+   .cluster-blue-bar {
+    width: 100%;
+    height: 42px;
+    background: linear-gradient(90deg, #003c9e, #0057d9, #00a9e8);
+    display: block;
+    }
+
+    /* Responsivo */
+    @media (max-width: 1200px) {
+    .cluster-hdi-wrapper {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+    }
+
+    .cluster-hdi-left {
+        max-width: 760px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .cluster-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cluster-hdi-logo {
+        margin-bottom: 35px;
+    }
+
+    .cluster-hdi-right {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .cluster-image-area,
+    .cluster-text-item {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .cluster-benefits {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .benefits-title {
+        grid-column: 1 / -1;
+    }
+    }
+
+    @media (max-width: 768px) {
+    .cluster-hdi-page {
+        padding-top: 80px;
+    }
+
+    .cluster-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item {
+        border-left: none;
+        padding-left: 0;
+    }
+    }
 
     /* =====================================================
       SEÇÃO PRINCIPAL
